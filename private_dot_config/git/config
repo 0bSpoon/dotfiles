@@ -1,0 +1,7 @@
+[user]
+	name = Taiki Matsumoto
+	email = bSpoon@outlook.jp
+[core]
+	editor = nvim
+[init]
+	defaultBranch = master
