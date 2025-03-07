@@ -1,1 +1,11 @@
 #!/bin/zsh
+
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+# Changing directories
+setopt auto_cd
+setopt auto_pushd
+setopt pushd_ignore_dups
