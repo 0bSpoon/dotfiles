@@ -1,20 +1,44 @@
 format = """
-$os\
+[╭─](bold green)$os\
+$username\
+$hostname\
 $directory\
 $git_branch\
 $git_status\
-$rust\
+$container\
+$docker_context\
 $package\
+$python\
+$rust\
+$lua\
+$terraform\
+$aws\
+$gcloud\
+$openstack\
+$azure\
 $fill\
+$cmd_duration\
 $time\
 \n$character"""
+[username]
+format = '[$user]($style)@'
 
+[hostname]
+ssh_symbol = "󰣀 "
+format = '[$hostname $ssh_symbol]($style)'
+
+[directory]
+style = 'bold cyan'
+format = '[󰝰  $path ]($style)'
+truncation_length = 3
+truncation_symbol = '…/'
+read_only = " 󰌾"
 
 [character]
 disabled = false
-success_symbol = '[└─ ](bold green)'
-error_symbol = '[└─ ](bold cyan)'
-vimcmd_symbol = '[└─ ](bold blue)'
+success_symbol = '[╰─ ](bold green)'
+error_symbol = '[╰─ ](bold cyan)'
+vimcmd_symbol = '[╰─ ](bold blue)'
 
 [git_branch]
 symbol = ' '
@@ -22,7 +46,7 @@ format = '[on](white) [$symbol$branch ]($style)'
 
 [fill]
 style = "bright-black"
-symbol = " "
+symbol = "─"
 
 [time]
 disabled = false
@@ -48,12 +72,6 @@ symbol = " "
 [dart]
 symbol = " "
 
-[directory]
-style = 'bold cyan'
-format = '[󰝰 $path ]($style)'
-truncation_length = 3
-truncation_symbol = '…/'
-read_only = " 󰌾"
 
 [docker_context]
 symbol = " "
@@ -87,9 +105,6 @@ symbol = " "
 
 [hg_branch]
 symbol = " "
-
-[hostname]
-ssh_symbol = " "
 
 [java]
 symbol = " "
