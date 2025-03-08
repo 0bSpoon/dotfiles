@@ -1,5 +1,5 @@
 format = """
-[╭─](bold green)$os\
+[╭─](bold bright-black)$os\
 $username\
 $hostname\
 $directory\
@@ -19,7 +19,7 @@ $azure\
 $fill\
 $cmd_duration\
 $time\
-\n$character"""
+\n[╰─](bold bright-black)$character"""
 [username]
 format = '[$user]($style)@'
 
@@ -34,13 +34,22 @@ truncation_length = 3
 truncation_symbol = '…/'
 read_only = " 󰌾"
 
+[package]
+style = 'blue'
+symbol = '󰏖 '
+
+[python]
+style = 'cyan'
+symbol = " "
+
 [character]
 disabled = false
-success_symbol = '[╰─ ](bold green)'
-error_symbol = '[╰─ ](bold cyan)'
-vimcmd_symbol = '[╰─ ](bold blue)'
+success_symbol = '[ ](bold green)'
+error_symbol = '[ ](bold cyan)'
+vimcmd_symbol = '[ ](bold blue)'
 
 [git_branch]
+style = 'purple'
 symbol = ' '
 format = '[on](white) [$symbol$branch ]($style)'
 
@@ -48,8 +57,12 @@ format = '[on](white) [$symbol$branch ]($style)'
 style = "bright-black"
 symbol = "─"
 
+[cmd_duration]
+style = 'yellow'
+
 [time]
 disabled = false
+style = 'yellow'
 
 [aws]
 symbol = "  "
@@ -188,9 +201,6 @@ Unknown = " "
 Void = " "
 Windows = "󰍲 "
 
-[package]
-symbol = "󰏗 "
-
 [perl]
 symbol = " "
 
@@ -199,9 +209,6 @@ symbol = " "
 
 [pijul_channel]
 symbol = " "
-
-[python]
-symbol = " "
 
 [rlang]
 symbol = "󰟔 "
