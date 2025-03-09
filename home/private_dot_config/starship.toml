@@ -28,7 +28,7 @@ ssh_symbol = "󰣀 "
 format = '[$hostname $ssh_symbol]($style)'
 
 [directory]
-style = 'bold cyan'
+style = 'bold bright-green'
 format = '[󰝰  $path ]($style)'
 truncation_length = 3
 truncation_symbol = '…/'
@@ -44,25 +44,28 @@ symbol = " "
 
 [character]
 disabled = false
-success_symbol = '[ ](bold green)'
-error_symbol = '[ ](bold cyan)'
+success_symbol = '[ ](bold cyan)'
+error_symbol = '[ ](bold red)'
 vimcmd_symbol = '[ ](bold blue)'
 
 [git_branch]
-style = 'purple'
+style = 'bright-purple'
 symbol = ' '
 format = '[on](white) [$symbol$branch ]($style)'
+
+[git_status]
+style = 'bold purple'
 
 [fill]
 style = "bright-black"
 symbol = "─"
 
 [cmd_duration]
-style = 'yellow'
+style = 'bright-yellow'
 
 [time]
 disabled = false
-style = 'yellow'
+style = 'bright-yellow'
 
 [aws]
 symbol = "  "
@@ -151,7 +154,7 @@ symbol = " "
 
 [os]
 format = "[$symbol ]($style)"
-style = "bold green"
+style = "bold cyan"
 disabled = false
 
 [os.symbols]

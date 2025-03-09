@@ -25,4 +25,5 @@ window-theme = ghostty
 # background-opacity = 0.85
 # background-blur-radius = 20
 
-theme = Oxocarbon
+theme = Dark Modern
+background = #000000
