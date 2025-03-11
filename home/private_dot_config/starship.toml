@@ -1,5 +1,7 @@
+add_newline = true
+
 format = """
-[╭─](bold bright-black)$os\
+$os\
 $username\
 $hostname\
 $directory\
@@ -16,10 +18,8 @@ $aws\
 $gcloud\
 $openstack\
 $azure\
-$fill\
-$cmd_duration\
-$time\
-\n[╰─](bold bright-black)$character"""
+\n[╰─](bold white)$character"""
+
 [username]
 format = '[$user]($style)@'
 
@@ -29,7 +29,7 @@ format = '[$hostname $ssh_symbol]($style)'
 
 [directory]
 style = 'bold bright-green'
-format = '[󰝰  $path ]($style)'
+format = '[$path ]($style)'
 truncation_length = 3
 truncation_symbol = '…/'
 read_only = " 󰌾"
@@ -44,9 +44,9 @@ symbol = " "
 
 [character]
 disabled = false
-success_symbol = '[ ](bold cyan)'
-error_symbol = '[ ](bold red)'
-vimcmd_symbol = '[ ](bold blue)'
+success_symbol = '[ ](bold cyan)'
+error_symbol = '[](bold red)'
+vimcmd_symbol = '[](bold blue)'
 
 [git_branch]
 style = 'bright-purple'
@@ -56,15 +56,17 @@ format = '[on](white) [$symbol$branch ]($style)'
 [git_status]
 style = 'bold purple'
 
+
 [fill]
 style = "bright-black"
 symbol = "─"
 
 [cmd_duration]
+disabled = true
 style = 'bright-yellow'
 
 [time]
-disabled = false
+disabled = true
 style = 'bright-yellow'
 
 [aws]
@@ -154,7 +156,7 @@ symbol = " "
 
 [os]
 format = "[$symbol ]($style)"
-style = "bold cyan"
+style = "bold blue"
 disabled = false
 
 [os.symbols]

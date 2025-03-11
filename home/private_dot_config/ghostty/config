@@ -15,7 +15,6 @@
 # Additionally, each config option is also explained in detail
 # on Ghostty's website, at https://ghostty.org/docs/config.
 
-
 gtk-titlebar = false
 gtk-wide-tabs = false
 window-padding-x = 12
@@ -26,4 +25,4 @@ window-theme = ghostty
 # background-blur-radius = 20
 
 theme = Dark Modern
-background = #000000
+background = #0A0A0A
