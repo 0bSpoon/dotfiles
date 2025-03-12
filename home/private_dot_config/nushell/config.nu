@@ -1,5 +1,5 @@
-$env.editor = (which "nvim")
-$env.visual = (which "nvim")
+$env.EDITOR = ( which nvim | $in.path.0 )
+$env.VISUAL = ( which nvim | $in.path.0 )
 
 $env.config.show_banner = false
 
